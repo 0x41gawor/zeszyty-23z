@@ -40,11 +40,11 @@ Autor: Rob Wojcik SEI (Carnegie Mellon)
 
 Projektowanie architektury rozpoczyna się po wstępnej analizie wymagań. Należy zidentyfikować czynniki kształtujące architekturę architectural drivers ) kluczowe wymagania funkcjonalne, jakościowe i biznesowe
 
-![image-20231122155811160](img\image-20231122155811160.png)
+![image-20231122155811160](img/image-20231122155811160.png)
 
 ### RUP 4+1 Views
 
-![image-20231122160002186](img\image-20231122160002186.png)
+![image-20231122160002186](img/image-20231122160002186.png)
 
 Robimy albo:
 
@@ -97,7 +97,7 @@ Robimy albo:
 - procesory
 - wymagania
 
-![image-20231122134547949](img\image-20231122134547949.png)
+![image-20231122134547949](img/image-20231122134547949.png)
 
 ### PKW example
 
@@ -105,13 +105,13 @@ PKW - Państwowa Komisja Wyborcza
 
 TKW - Terenowa Komisja Wyborcza
 
-<img src="img\image-20231122134709910.png" alt="image-20231122134709910" style="zoom:67%;" />
+<img src="img/image-20231122134709910.png" alt="image-20231122134709910" style="zoom:67%;" />
 
-<img src="img\image-20231122134725768.png" alt="image-20231122134725768" style="zoom:67%;" />
+<img src="img/image-20231122134725768.png" alt="image-20231122134725768" style="zoom:67%;" />
 
-<img src="img\image-20231122134737250.png" alt="image-20231122134737250" style="zoom:67%;" />
+<img src="img/image-20231122134737250.png" alt="image-20231122134737250" style="zoom:67%;" />
 
-<img src="img\image-20231122134750306.png" alt="image-20231122134750306" style="zoom:67%;" />
+<img src="img/image-20231122134750306.png" alt="image-20231122134750306" style="zoom:67%;" />
 
 # Wzorce arch. oraz taktyki arch.
 
@@ -142,7 +142,7 @@ Wzorce:
 
 ##### Warstwy
 
-<img src="img\image-20231122161312300.png" alt="image-20231122161312300" style="zoom:67%;" />
+<img src="img/image-20231122161312300.png" alt="image-20231122161312300" style="zoom:67%;" />
 
 Podział systemu na niezależne fragmenty, rozwijane też niezależnie. Mogą być dostarczane przez różne podmioty. 
 
@@ -152,7 +152,7 @@ Wady: jak każdego pośrednika - wnosi swój narzut. Budowa warstwowa "od zera" 
 
 np. OSI
 
-<img src="img\image-20231122161714878.png" alt="image-20231122161714878" style="zoom:33%;" />
+<img src="img/image-20231122161714878.png" alt="image-20231122161714878" style="zoom:33%;" />
 
 > kurwa nie podoba mi się ten wykład, on ma ten przedmiot w chuju chyba xd
 >
@@ -168,9 +168,9 @@ Wzorce:
 
 ##### Potoki i filtry
 
-<img src="img\image-20231122162336071.png" alt="image-20231122162336071" style="zoom:67%;" />
+<img src="img/image-20231122162336071.png" alt="image-20231122162336071" style="zoom:67%;" />
 
-![image-20231122162508558](img\image-20231122162508558.png)
+![image-20231122162508558](img/image-20231122162508558.png)
 
 Each filter exposes a very simple interface: it receives messages on the inbound pipe, processes the message, and publishes the results to the outbound pipe. The pipe connects one filter to the next, sending output messages from one filter to the next. Because all component use the same external interface they can be *composed* into different solutions by connecting the components to different pipes. We can add new filters, omit existing ones or rearrange them into a new sequence -- all without having to change the filters themselves. The connection between filter and pipe is sometimes called *port*. In the basic form, each filter component has one input port and one output port.
 
@@ -178,7 +178,7 @@ https://www.enterpriseintegrationpatterns.com/patterns/messaging/
 
 ##### Sekwencyjne przetwarzanie wsadowe
 
-<img src="img\image-20231122162759890.png" alt="image-20231122162759890" style="zoom:67%;" />
+<img src="img/image-20231122162759890.png" alt="image-20231122162759890" style="zoom:67%;" />
 
 Wsadowe wywołania do usługi zdalnej to dobrze znana strategia zwiększania wydajności i skalowalności. Istnieją stałe koszty przetwarzania dla wszelkich interakcji z usługą zdalną, takich jak serializacja, transfer sieciowy i deserializacja. Pakowanie wielu oddzielnych transakcji w jednej partii minimalizuje te koszty.
 
@@ -199,13 +199,13 @@ przykład:
 
 często realizowane jako klient-serwer
 
-<img src="img\image-20231122163150698.png" alt="image-20231122163150698" style="zoom:67%;" />
+<img src="img/image-20231122163150698.png" alt="image-20231122163150698" style="zoom:67%;" />
 
 ##### Aktywne repozytorium
 
 Repozytorium informuje wszystkich korzystających o pojawieniu się nowych danych lub ich zmianie
 
-<img src="img\image-20231122163240161.png" alt="image-20231122163240161" style="zoom:67%;" />
+<img src="img/image-20231122163240161.png" alt="image-20231122163240161" style="zoom:67%;" />
 
 ##### Blackboard
 
@@ -240,7 +240,7 @@ Wzorce:
 
 MVC i wszelkie rozszerzenia. Znany i lubiany.
 
-<img src="img\image-20231122163849918.png" alt="image-20231122163849918" style="zoom:67%;" />
+<img src="img/image-20231122163849918.png" alt="image-20231122163849918" style="zoom:67%;" />
 
 Problem jaki rozwiązuje:
 
@@ -250,7 +250,7 @@ Jak odseparować UI od logiki biznesowej zachowując możliwość reagowania na 
 
 http://kurs.aspnetmvc.pl/Wzorce/PAC
 
-<img src="img\image-20231122164143256.png" alt="image-20231122164143256" style="zoom:77%;" />
+<img src="img/image-20231122164143256.png" alt="image-20231122164143256" style="zoom:77%;" />
 
 https://en.wikipedia.org/wiki/Presentation%E2%80%93abstraction%E2%80%93control
 
@@ -270,7 +270,7 @@ Wzorce:
 
 ##### Broker
 
-<img src="img\image-20231122165207932.png" alt="image-20231122165207932" style="zoom:67%;" />
+<img src="img/image-20231122165207932.png" alt="image-20231122165207932" style="zoom:67%;" />
 
 Jak w MQTT
 
@@ -287,7 +287,7 @@ Jak zminimalizować liczbę protokołów komunikacyjnych, które musi znać usł
 
 ##### Magistrala
 
-<img src="img\image-20231122165725074.png" alt="image-20231122165725074" style="zoom:67%;" />
+<img src="img/image-20231122165725074.png" alt="image-20231122165725074" style="zoom:67%;" />
 
 ### Widok rozmieszczenia komponentów
 
@@ -297,7 +297,7 @@ Jak zminimalizować liczbę protokołów komunikacyjnych, które musi znać usł
 
 Czynniki wpływające na architekturę:
 
-<img src="img\image-20231122134846983.png" alt="image-20231122134846983" style="zoom:67%;" />
+<img src="img/image-20231122134846983.png" alt="image-20231122134846983" style="zoom:67%;" />
 
 ### Atrybuty jakościowe
 
