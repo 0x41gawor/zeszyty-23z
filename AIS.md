@@ -1,26 +1,18 @@
 # Co trzeba umieć do projektu
 
 - Założenia systemu 	
-  - 1                                     MP
-
+  
 - Interesariusze (ich cele oraz zadania)
-  - 2                                     JK
-
+  
 - Przypadki użycia (główne oraz alternatywne)
-  - 2                                    KKP
-
+  
 - Podstawowy scenariusz
-  - 2                                    KKP
-
+  
 - 4+1 Views (logical, development, use case, process, physical)
-  - logical 				5          KKP  
-  - development     3          AG
-  - use case              4         JK
-  - process               7         AG
-  - physical               4         JK   
 
 
-- Kluczowe wzorce architektoniczne i taktyki  + MAD 2.0 - decyzje architektoniczne       9             MP
+- Kluczowe wzorce architektoniczne i taktyki 
+- MAD 2.0 - decyzje architektoniczne 
 
 # Wykład - istotne rzeczy niebezpośrednio proj
 
@@ -30,7 +22,7 @@
 
 **widok** - reprezentacja (całego) systemu IT z punktu widzenia pewnego zbioru zainteresowań
 
-**Punkt widzenia** (viewpoint) - ): specyfikacja konwencji tworzenia i używania widoków. Wzorzec lub szablon określający jak tworzyć pojedyncze widoki. Obejmuje cel i grupę docelową widoku oraz techniki tworzenia i analizy.
+**Punkt widzenia** (viewpoint) - specyfikacja konwencji tworzenia i używania widoków. Wzorzec lub szablon określający jak tworzyć pojedyncze widoki. Obejmuje cel i grupę docelową widoku oraz techniki tworzenia i analizy.
 
 ## Metody projektowania
 
@@ -291,11 +283,18 @@ Jak zminimalizować liczbę protokołów komunikacyjnych, które musi znać usł
 
 ### Widok rozmieszczenia komponentów
 
+Wzorce:
 
+- arch monolityczna
+- arch warstwowa
+- arch klient-serwer
+- arch amorficzna (peer-to-peer)
 
 # MAD 2.0 - decyzje architektoniczne
 
 Czynniki wpływające na architekturę:
+
+Czyli tzw: **architectura drivers**
 
 <img src="img/image-20231122134846983.png" alt="image-20231122134846983" style="zoom:67%;" />
 
@@ -310,90 +309,254 @@ Czynniki wpływające na architekturę:
 - ponowne użycie komponentów
 - time-to-market (kontrolowalność xd)
 
-# Kurewsko potężny opis
+### Taktyki architektoniczne
 
-System zarządzania logistyką przesyłek dla poczty/firmy kurierskiej. 
+Kluczowe decyzje konstrukcyjne (architektoniczne) mające wpływ na atrybuty jakościowe.
 
-Zarządzanie przesyłkami, transportami i śledzenie przesyłek.
+##### Taktyki dostępności
 
+- Wykrywanie awarii
+  - ping/echo
+  - protokół bicia serca (keepalive w routerach heartbeat w 5G)
+  - głosowanie (nwm co to)
+  - Wykrywanie wyjątków (exceptios)
+  - self-test
+- Przywracanie działania
+  - aktywna i pasywne redundancja (czyli architektura 1+1, active/active lub active/standby)
+  - check-point  / rollback (jak w bazach danych)
+  - resynchornizacja stanu (przywrócenie stanu komponentu z kopii - backup)
+  - zapas
+- Zapobieganie awariom
+  - wyłączenie (ang. removal from service)
+  - transakcyjność
+  - zapobieganie wyjątkom
+  - rozszerzanie zbioru kompetencji (np. dodanie warunków wykrywających wartości prowadzące do niedozwolonych operacji)
 
+##### Taktyki interoperacyjności
 
-Odbiorca/Nadawca:
+- lokalizacja
+  - odkrywanie usług (service discovery (jak w 5G))
+- zarządzanie interfejsami
+  - orkiestracja
+  - dostosowywanie interfejsów
 
-- Adres
-- Nr tel
-- Imię i Nazwisko 
+##### Taktyki modyfikowalności
 
+- Zwiększenie spójności komponentów
+- Ograniczanie powiązań (coupling reduction)
+- Zmniejszanie wielkości modułu
+- Odkładanie przypisania wartości
+- Komunikacja przez pośrednika
 
+##### Taktyki wydajności
 
-User:
+- Kontrolowane zapotrzebowania na zasoby
+  - Ograniczenie narzutów (np. warstw/komponentów pośredniczących)
+  - Ograniczenie liczby obsługiwanych zdarzeń
+  - Optymalizacja algorytmów
+- Zarządzanie zasobami
+  - Zwiększenie ilości zasobów
+  - Zrównoleglanie obliczeń
+  - Utrzymywanie wielu kopii komponentów i równoważenie obciążenia
+  - Arbitraż zasobowy, szeregowanie zadań
+  - Pamięć podręczna
 
-- email
-- czy ma premium
-- dane odbiorcy/nadawcy może sobie wypełnić
+##### Taktyki bezpieczeństwa
 
-Jeśli mamy konto w apce to na dany email możemy uzupełniać automatycznie dane. 
+- Wykrywanie ataków
+- Odporność na ataki
+  - Identyfikacja użytkowników
+  - Autentykacja i autoryzacja użytkowników
+  - Szyfrowanie danych
+  - Ograniczenie narażenia na ataki (ang. limit exposure)
+  - Odseparowanie podsystemów
+- Reakcja na ataki
+  - Ogranicz lub odbierz dostęp
+  - Blokowanie przy próbie włamania
+  - Wzbudź alarm - informuj adminów etc.
+- Wznowienie po ataku
+  - Rejestracja operacji (ang. maintain audit trail)
+  - Odzyskiwanie z kopii, użycie komponentu zapasowego
 
+### Wzorzec vs Taktyka vs Strategia arch.
 
+**Wzorzec arch.** - połączenie taktyk arch.
 
-Transakcja:
+**Strategia arch.** - zbiór taktyk arch.
 
-- id z którego da się wyciągnąć odbiorcę i nadawcę
+### Typowe wady arch
 
-- status 
-  - paczka oczekuje w domu usera na odbiór przez kuriera
-  - kurier podejmuje próbę odbioru
-  - kurier odebrał paczkę i jeździ sobie ona z nim aż wieczorem zajedzie do oddziału
-  - paczka jest w oddziale 1st-hop 
-  - (routing po oddziałach jest robiony)
-  - paczka jest w oddziale last-hop
-  - paczka opuszcza wraz z kurierem oddział (last-hop) i jest u niego na pace, czyli kurier podejmuje próbę dostarczenia
-  - paczka dostarczona
-- kiedy kurier może odebrać paczkę od nadawcy
+- SPOF (Single Point Of Failure)
+- Wąskie gardło
+- Nadmierna liczba powiązań
+  - niska modyfikowalność
+- Niespójność (cohesion) modułu
+- Rozproszenie funkcjonalności
+- Zróżnicowanie (nadmierne) równoważnych komponentów
 
+### Decyzje
 
+Większość systemów IT osiąga swój stan aktualny na drodze ewolucji.
+Wiedza architektoniczna to nie tylko aktualny stan architektury ale także ścieżka prowadząca do tego stanu.
+Wiedza architektoniczna „ulatnia się” (vaporize) –żeby temu zapobiec powstała koncepcja dokumentowania decyzji architektonicznych.
 
-Firma nasza pozwala nadawcy wysłać paczkę do odbiorcy zdefiniowanego jako trójka wyżej. Usługa skierowana jest wyłącznie do osób prywatnych. Wszelkie optymalizacje robione są w tym kierunku. A hasło przewodni to "Klient nasz Pan, kurier to pies". Firma działa w modelu subskrypcji miesięcznej. Target to ludzie co wysyłają często paczki. Sub jest opcjonalny. Jak ktoś ma suba to jest nazywany User Premium. Userzy premium nie płacą za pojedyncze wysłanie paczki. 
+**Decyzja arch** - opis modyfikacji architektury (w tym usuwania lub dodawania elementów architektonicznych), uzasadnienie, zasady i ograniczenia projektowe oraz dodatkowe wymagania. Decyzja architektoniczna zapewnia (częściową) realizację jednego lub więcej wymagań.
 
+Decyzję opisuje trójka:
 
+- **uzasadnienie** - wyjaśnienie, dlaczego modyfikacja jest wprowadzana
+- **zasady i ograniczenia projektowe** - przepisy dla przyszłych decyzji, zasady są obowiązkowymi wskazówkami, ograniczenia pokazują granice, których nie powinny przekraczać przyszłe decyzje
+- **dodatkowe wymagania** - decyzja może powodować powstawanie nowych wymagań, które mogą generować potrzeby kolejnych decyzji architektonicznych
 
-Jak wygląda proces wysłania paczki (całościowy)?
+### MAD 2.0
 
-Nadawca poprzez aplikacje web wypełnia informacje o odbiorcy (adres, nr tel, imie i nazwisko) (po podaniu e-mail odbiorcy jeśli ten ma konto w serwisie to te dane zaciągają się automatycznie) i o samej paczce (rozmiar (mała, duża, średnia), czy fragile) i o priorytecie nadania. Info o rozmiarze nie musi być podawane przez Usera Premium. Serwis dla userów nie-premium wtedy nalicza opłatę na podstawie parametrów wysłania. User nie-premium za pomocą 3rd-party serwisu (przelew24, g pay, paypal, blik, apple pay, visa, master card) dokonuje płatności. I podaje w jakich godzinach w jakie najbliższe 5 dni jest dostępny na swojej chacie, żeby kurier przyjechał po paczkę. 
+Dzieli się na dwie części:
 
+- ADRD (Architecture Decisions Relationship Diagram)
+  - On pokazuje relacje między decyzjami. Zaczynamy od jednej decyzje, no to trzeba podjąć kolejną, dochodzimy nimi do następnej i tak mnóstwo jest rozgałęzień
+- ADPM (Architecture Decision Problem Map)
+  - Tu już rozważamy single decyzje. Jeden element z ADRD. Tutaj podejmujemy próbę podjęcia tej decyzji.
 
+#### ADRD
 
-Serwis zarejestrował nową **transakcję** (wysłanie paczki). Nadał unikalne id (które ma zakodowane w sobie info odbiorcy i nadawcy oraz numer sekwencyjny). Serwis wysyła sms do odbiorcy, że jedzie do niego paczka, na dany adres i że może ją śledzić przez web na podstawie takiego id, i że prawdopodobnie przyjdzie w takim a takim terminie. i nadawca też dostaje taki sms, zeby mógł ją śledzić
+Elementy tego diagramu to:
 
-Serwis na podstawie lokalizacji odbiorcy wybiera **oddział**, który jest najbliżej nadawcy. A potem spośród **kurierów** należących do tego oddziału, wybiera kuriera dla tej transakcji. 
+- równoległobok
+- konektor
 
-Serwis stosuje algorytm, które optymalnie planuje drogi kurierom (problem komiwojażera). Przypisanie kuriera do transakcji jest dynamiczne i moze się zmienić póki kurier nie zmieni stanu transakcji na próba odbioru. 
+**Równoległobok** symbolizuje Decision Problem. Jest na nim jego nazwa. A bg-color odwierciedla status problemu. Status (**defined** - problem świeżo zdefiniowany, being solved istnieje już ADPM dla niego ale jeszcze brak decyzji, **requires reassesment** - żeby rozwiżać ten problem, to trzeba podjąć na nowo decyzje w już rozwiązanym problemie, **resolved** - wiadomka)
 
-Kurier ma apke (a serwis za nią), gdzie ma listę transakcji do obsłużenia, tam są adresy pod które ma jechać, żeby odebrać paczki. 
+**Konektor** - shows that one problem led to another, może mieć dwa typy zwykły oraz, że jeden problem ogranicza możliwości decyzyjne w innym
 
-Kurier, który podejmuje próbę odbioru informuje telefonicznie o tym `transakcja.nadawca.nr_tel` nadawcę. No i jak mu się uda odberać (zaznacza ten stan w serwisie, serwis drukuje mu etykiete, kurier ją nakleja na paczke),  pakuje ją na pake i na koniec dnia trafia ona do oddziału. Rzuca ją do wielkiego kotła z paczkami.
+<img src="img/123.png" style="zoom:80%;" />
 
-Na drugi dzień rano pracownik oddziału, bierze paczkę, skanuje jej etykietę i serwis wyznacza gdzie jest next-hop-oddział, więc pracownik zanosi paczke do odpowiedniego kotła. 
+#### ADPM
 
-Potem z kotła kurier tranzytowy (czyli taki co jeździ między oddziałami a nie do ludzi), bierze paczki do kolejnego oddziału. Taki proces może się powtórzyć od 0 do 1 raz*. Kurier tranzytowy nie używa wgl serwisu. On dostaje tylko destination gdzie ma jechać, ale to poza systemem.
+Elementy mapy myśli to:
 
-> Ustalamy że oddziały są każdy z każdym połączone bezpośrednio, i że kurierzy tranzytowi walą całą trasę na strzała.
+- równoległobok
 
-W końcu paczka jest w oddziale końcowym. Pracownik na wejściu skanuje paczke i zmienia jej status na `paczka jest w oddziale last-hop`. Serwis wyznacza kuriera, który podejmie się próby dostarczenia. Pracownik wrzuca ją do kotła danego kuriera. Kurier zabiera paczki przypisane do niego. I dla każdej podejmuje się próby dostarczenia. Kurier ma apke gdzie jest lista paczek do dostarczenia. W momencie, gdy kurier zmienia stan transakcji z `(routing po oddziałach jest robiony)` na `paczka opuszcza wraz z kurierem oddział (last-hop) i jest u niego na pace` odbiorca otrzymuje sms, że kurier wyruszył i serwis wyznacza kiedy prawdopodobnie kurier się zjawi (automatycznie taki sms się wysyła). 
+- zaokrąglony prostokąt
+- sześciokąt
+- kwadrat
+- elipsa
+- okrąg
 
-> W tym smsie musi być nr kontaktowy do kuriera żebyś mógł uzgodnić termin doręczenia. 
+**Równoległobok** symbolizuje znowu Decision Problem, to jest reference do ADRD. 
 
-Kurier jeździ sobie z paczką aż w końcu jest próba doręczenia. W międzyczasie kurier może dostać telefon od odbiorcy danej transakcji, żeby zmienić termin dostarczenia i kurier wklepuje to w system, żeby to uwzględnić (jak jest jakaś mocna zmiana) albo dogadują się external. Jak kurier nie dostarczy paczki danego dnia to cofa jej status i na drugi dzień dzieje się to samo. I tak w pętli aż do skutku lub do 3 iteracji (próby doręczenia).
+**Elipsa** - to "decision maker", interesariusz który jest odpowiedzialny za tę decyzje, połączona z problemem
 
-Jak miną 3 iteracje to serwis zmienia odbiorcę paczki na nadawcę i sam z siebie korzysta zeby ją doręczyć. 
+**Okrąg** to wymaganie, połączony z problemem
 
-Jak dojdzie do odebrania, to kurier w apce zmienia status transakcji na `paczka dostarczona, transakcja zakończona`.
+**Zaokrąglony prostokąt** - to "solution", wskazuje jedno z rozwiązań problemu , połączony z problemem
 
-**Proces od strony odbiorcy:**
+**Sześciokąt** - połączony  z solution, wskazuje jego wadę
 
-Rano dostaje smsa, ze kurier spróbuje doręczyć mu paczke po taki a taki adres.
+**Kwadrat** - połączony z solution, wskazuje jego zaletę
 
-Jak mu pasi ten termin to git.
+<img src="img/1234.png" style="zoom:75%;" />
 
-Jak mu nie pasi termin to może zadzwonić do kuriera, i się umówić albo external z kurierem (zmiana godziny), albo większa zmiana - inny dzień (od nowa odpali się proces dostarczenia).
+Defined - świeżo zdefiniowane, jeszcze nie oceniliśmy tego
+
+Infeasible - nie nadaje się 
+
+Feasbie - rozważamy to
+
+Chosen - decyzja podjęta, 
+
+#### Przykład
+
+The company wants to offer a new product composed of the installation and
+maintenance of fibre optic networks services and the delivery of IT equipment being
+sold together as a product bundle. The product can be sold by two subsidiaries of the
+telecom company under their own brand. There are various financing options planned
+for such a product: wire transfer, credit instalment payments or even leasing.
+The product components will be provided by two independent external
+subcontractors: “subcontractor A” will deliver IT equipment, “subcontractor B” will
+install fibre-optic networks in the clients’ premises and will configure the delivered
+equipment so that both elements operate together.
+
+![](img/1.png)
+
+![](img/2.png)
+
+# Kolos opracowanie pytań z Memorizer
+
+![image-20231123172242058](img/image-20231123172242058.png)
+
+![image-20231123173042246](img/image-20231123173042246.png)
+
+**widok** - reprezentacja (całego) systemu IT z punktu widzenia pewnego zbioru zainteresowań
+
+**Punkt widzenia** (viewpoint) - specyfikacja konwencji tworzenia i używania widoków. Wzorzec lub szablon określający jak tworzyć pojedyncze widoki. Obejmuje cel i grupę docelową widoku oraz techniki tworzenia i analizy
+
+![image-20231123173149146](img/image-20231123173149146.png)
+
+4+1 Views:
+
+- logical, 
+- development, 
+- use case, 
+- process, 
+- physical
+
+![image-20231123173548775](img/image-20231123173548775.png)
+
+Czyli na diagramie ADRD.
+
+<img src="img/123.png" style="zoom:40%;" />
+
+Decyzja może być swieżo zdefiniowana i jeszcze nic z nią nie robiono. 
+
+Może się okazać, że wymaga przedecyzjonowania jakichś podjętych wcześniej.
+
+Może być w trakcie podejmowania.
+
+Może być zakończona. 
+
+![image-20231123173740296](img/image-20231123173740296.png)
+
+![image-20231123182108371](img/image-20231123182108371.png)
+
+![image-20231123182207875](img/image-20231123182207875.png)
+
+![image-20231123182227938](img/image-20231123182227938.png)
+
+![image-20231123182255950](img/image-20231123182255950.png)
+
+ATAM : określa stopień w jakim a rchitektura osiąga określone atrybuty jakościowe i pozwala lepiej zrozumieć jakie są zależności między tymi atrybutami czyli to, jakie **kompromisy (tradeoffs)** pomiędzy nimi będą potrzebne.
+
+<img src="img/image-20231123182746231.png" alt="image-20231123182746231" style="zoom:50%;" />
+
+![image-20231123182816118](img/image-20231123182816118.png)
+
+![image-20231123182834156](img/image-20231123182834156.png)
+
+![image-20231123182904964](img/image-20231123182904964.png)
+
+<img src="img/image-20231123182916169.png" alt="image-20231123182916169" style="zoom:50%;" />
+
+![image-20231123182937638](img/image-20231123182937638.png)
+
+![image-20231123182957834](img/image-20231123182957834.png)
+
+**Taktyki architektoniczne** - kluczowe decyzje konstrukcyjne (architektoniczne) mające wpływ na atrybuty jakościowe.
+
+![image-20231123183256743](img/image-20231123183256743.png)
+
+![image-20231123183414505](img/image-20231123183414505.png)
+
+![image-20231123183603275](img/image-20231123183603275.png)
+
+![image-20231123183428529](img/image-20231123183428529.png)
+
+![image-20231123183701708](img/image-20231123183701708.png)
+
+![image-20231123183720334](img/image-20231123183720334.png)
+
+![image-20231123183812517](img/image-20231123183812517.png)
+
+![image-20231123183831863](img/image-20231123183831863.png)
+
+![image-20231123183851886](img/image-20231123183851886.png)
 
