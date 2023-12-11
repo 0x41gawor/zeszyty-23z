@@ -560,3 +560,101 @@ ATAM : określa stopień w jakim a rchitektura osiąga określone atrybuty jako�
 
 ![image-20231123183851886](img/image-20231123183851886.png)
 
+# ---
+
+```
+shape: sequence_diagram
+aweb: Aplikacja Web
+sysc: System Centralny
+sero: Serwis Obliczania Opłat
+serp: Serwis Płatności
+serg: Serwis Geolokalizacyjny
+serk: Serwis Zarządzania Kurierami
+aweb -> sysc: Żądanie wysłania paczki
+sysc -> sero: Żądanie obliczenia opłaty za paczkę
+sero."Odczytanie z bazy danych czy user jest premium, jeśli nie obliczenie opłąty na podstawie parametrów paczki"
+sero -> sysc: "Kwota zamówienia"
+sysc -> aweb: "Kwota zamówienia"
+aweb <-> serp: "Dokonanie płatności"
+sysc -> aweb: "Informacja o transakcji"
+sysc <-> serg: "Przypisanie do transakcji oddziału 1-st hop na podstawie adresu nadawcy"
+sysc <-> serk: "Przypisanie do transkacji kuriera, który odbierze paczke"
+```
+
+```
+shape: sequence_diagram
+
+kurier: Kurier
+akur: Aplikacja Android Kuriera
+sysc: System Centralny
+serp: Serwis Zarządzania Paczkami
+sers: "Serwis SMS"
+sere: "Serwis etykiet"
+kurier -> akur: ""
+akur -> sysc: "Żądanie listy adresów nadawców paczek na dany dzień"
+sysc <-> serp: "Forward/Response"
+sysc -> akur: "Lista adresów nadawców paczek na dany dzień"
+sysc <-> sers: "Poinformowanie nadawców o próbach odbioru ich paczek"
+kurier."Odebranie paczek klientów"
+kurier -> akur: ""
+akur -> sysc: "Żądanie wygenerowania etykiety"
+sysc <-> sere: "Forward/Response"
+sysc -> akur: "Etykieta dla paczki"
+kurier."Złożenie paczek w swoim oddziale"
+```
+
+```
+shape: sequence_diagram
+
+pr: Pracownik Oddziału
+apr: Aplikacja Android Pracownika
+sysc: System Centralny
+serp: Serwis Zarządzania Paczkami
+kur: Kurier Tranzytowy
+
+pr."Skanowanie paczek złożonych przez kuriera"
+pr -> apr: ""
+apr -> sysc: "Żądanie informacji gdzie przekazać paczkę"
+sysc <-> serp: "Forward/Response"
+sysc -> apr: "Informacje gdzie przekazać paczkę"
+pr."Przekazanie paczek do odpowiedniego kuriera tranzytowego"
+kur."Przewiezienie paczki do odziału last-hop"
+```
+
+```
+shape: sequence_diagram
+
+pr: Pracownik Oddziału
+apr: Aplikacja Android Pracownika
+sysc: System Centralny
+serk: Serwis Zarządzania Kurierami
+
+pr."Skanowanie paczek"
+pr -> apr: ""
+apr -> sysc: "Informacja o paczce która trafiła do odziału"
+sysc <-> serk: "Wyznaczenie optymalnego kuriera do dostarczenia paczki"
+sysc -> apr: "Informcja któremu kurierowi ją przekazać"
+apr -> pr: ""
+pr."Przekazanie paczki odpowiedniemu kurierowi"
+```
+
+```
+shape: sequence_diagram
+
+k: kurier
+ak: Aplikacja Android Kuriera
+sysc: System Centralny
+serp: Serwis Zarządzania Paczkami
+sers: "Serwis SMS"
+
+k -> ak: ""
+ak -> sysc: "Ządanie listy paczek do dostarczenia na dany dzień"
+sysc <-> serp: "Forward/Response"
+sysc -> ak: "Lista paczek do dostarczenia na dany dzień"
+sysc <-> sers: "Powiadomienie odbiorców o próbie dostarczenia paczki"
+k."Dostarczanie paczek poza systemem"
+k -> ak: ""
+ak -> sysc: "Zmiana statusu paczki"
+sysc <-> serp: "Forward/Response"
+```
+
