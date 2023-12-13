@@ -1,53 +1,28 @@
-> Konwencja
->
-> Jak coś ma * na końcu to znaczy, że "wyjaśnić"
+# Table of contents
 
-# Pytania z kolosa
+[Wzmacniacze Optyczne](#wzmacniacze-optyczne)
 
-- Parametr OPP :white_check_mark:
-- Dyspersja Polaryzacyjna :white_check_mark:
-- Dyspersja międzymodowa. W jakich światłowodach występuje
-- Maska wykresu oka :white_check_mark:
-- System RoF (rysunek + opis działania) :white_check_mark:
-- System ze zwielokrotnieniem SCM (rysunek + opis działania) :white_check_mark:
-- System ze zwielokrotnieniem WDM (rysunek + opis działania) :white_check_mark:
-- Wzmacniacz EDFA (rysunek + opis działania) :white_check_mark:
-- Jakie rodzaje zwielokrotnienia wykorzystywane są w systemach 40G i 100G Ethernet?
-- Od jakich parametrów wzmacniacza optycznego i w jaki sposób zależy poziom szumów na jego wyjściu? :white_check_mark:
-- Sieć PON: cechy w warstwie fizycznej :white_check_mark:
-- Sieć PON: jak najprościej przeprowadzić atak DoS posiadając dostęp do ONU
+[Parametry systemów optycznych](#Parametry-systemow-optycznych)
 
-> TDMA wykorzysywane jest w sieciach radiowych oraz w PON
+[Systemy WDM](#Systemy-WDM)
 
-# Rozdziały ze slajdów
+[OTN](#OTN)
 
-2 Przypomnienie podstaw
+[SCM](#SCM)
 
-30 Wzmacniacze optyczne :white_check_mark:
+[RoF](#RoF)
 
-56 Parametry systemów optycznych :white_check_mark:
+[LAN](#LAN)
 
-86 Systemy WDM :white_check_mark:
+[Optyczne sieci dostępowe](#optyczne-sieci-dostepowe)
 
-113 Sieci OTN :white_check_mark:
+- [Sieci PON](#Sieci-PON)
 
-131 Systemy SCM :white_check_mark:
-
-146 Systemy RoF :white_check_mark:
-
-155 Sieci LAN :white_check_mark:
-
-171 Optyczne sieci dostępowe (PON)
-
-203 NGPON2
-
-210 Transmisja Koherentna
-
-240 Kryptografia Kwantowa
-
-254 Ataki w sieciach optycznych
+[Ataki w sieciach światłowodowych](#Ataki-w-sieciach-swiatlowodowych)
 
 # Wzmacniacze optyczne
+
+[Table of Contents](#table-of-contents)
 
 **Wzmacniacz optyczny** - element wzmacniający bezpośrednio sygnał optyczny bez używania konwersji optoelektrycznej i elektrooptycznej (czyli nie zamienia go na prąd, a potem z powrotem na światło). 
 
@@ -191,7 +166,9 @@ Linia transmisyjna składająca się z N idetycznych sekcji, gdzie każda skład
 
 Gdzie P<sub>s</sub> to moc sygnału na wejściu systemu.
 
-# Parametry systemów optycznych
+# Parametry systemow optycznych
+
+[Table of Contents](#table-of-contents)
 
 W książce rozdział 3.2.1, 3.2.2, 3.2.3
 
@@ -290,6 +267,8 @@ Wykres oka pozwala łatwo ocenić zniekształcenia szumowe (rozwarcie* oka piono
 Im rozwarcie oka jest większe tym błędy są mniejsze. 
 
 > *rozwarce w sensie takie "roztworzenie" jak stary mówi np. "rozdziaw gębę" (bo wkłada Ci łyżkę z syropkiem)
+>
+> <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231213010533952.png" alt="image-20231213010533952" style="zoom: 80%;" />
 
 <img src="img/image-20231209160603481.png" alt="image-20231209160603481" style="zoom:67%;" />
 
@@ -410,6 +389,8 @@ Pomiar ma dwa etapty:
 OPP jest zdefiniowane jako P<sub>2</sub>-P<sub>1</sub>.
 
 # Systemy WDM
+
+[Table of Contents](#table-of-contents)
 
 ## Geneza
 
@@ -589,6 +570,8 @@ No ale są wyjątki:
 
 # OTN
 
+[Table of Contents](#table-of-contents)
+
 Omawiane do tej pory systemy WDM mają złącza optyczne point-2-point, więc w węzłach jest i tak zamieniany ten sygnał na elektryczny, co powoduje duże opóźnienia. Dużo fajniej by było gdyby w węzłach nie trzeba było zamieniać na sygnał elektryczny tylko komutować sygnały optyczne. 
 
 No więc zaczęto wymyślać taką sieć co miała mieć ogromne przepływności oraz transparentność na to co jest przesyłane (no bo węzły nie narzucają żadnej elektycznej reprezentacji sygnałów). W ówczesnych zamierzeniach klient takiej sieci miał uzyskać dostęp do kanału falowego, w którym mógł sobie przesyłać dane w dowolnym protokole i przepływności w niezmienionej formie między POPami - stąd w nazwie **Transparent**.
@@ -691,6 +674,8 @@ Zarządzanie w dziedzinie optycznej za pomocą o**ptycznego kanału nadzoru (OSC
 <img src="img/image-20231210232720252.png" alt="image-20231210232720252" style="zoom:67%;" />
 
 # SCM
+
+[Table of Contents](#table-of-contents)
 
 Ugułem to co wcześniej gadaliśmy o WDM i OTN to była transmisja danych cyfrowych - wiadomix. Ale należy pamiętać, że transmisja analogowa podczas gdy Siuzdak pisał książkę jeszce nie umarła i była powszechnie stosowana do tranistowania sygnałów telewizyjnych w formacie AM-VSB.
 
@@ -814,6 +799,8 @@ Cable TV.
 
 # RoF
 
+[Table of Contents](#table-of-contents)
+
 Pierwszym systemem, o którym sobie powiemy, który korzysta z SCM jest **RoF - Radio over Fibre**.
 
 Wykorzystuje światłowody do transmisji sygnałów o częstotliwościach radiowych pomiędzy stacją centralną a odległymi stacjami antenowymi RAU (Remote Antenna Unit). 
@@ -850,6 +837,8 @@ sygnał radiowy podlega konwersji ADC/DAC* i w światłowodzie <s>transmituje si
 <img src="img/image-20231211145742777.png" alt="image-20231211145742777" style="zoom:50%;" />
 
 # LAN
+
+[Table of Contents](#table-of-contents)
 
 Ethernet to standard IEEE.802.3, który definiuje zbiór reguł określających zachowanie hostów w sieci (CSMA/CD)
 
@@ -965,7 +954,9 @@ Przedstawie są tu wybrane (nie wszystkie) warianty warstw fizycznych standardu
 - zasięg 40km (uwaga, może wymagać stosowania SOA)
 - Reszta jak wyżej
 
-# Optyczne sieci dostępowe
+# Optyczne sieci dostepowe
+
+[Table of Contents](#table-of-contents)
 
 Sieć dostępowa rozciąga się między centralą operatora a abonentami indywidualnymi (mieszkania, domy) lub biznesowymi (firmy). Typowy zasięg wynosi od kilku do kilkunastu kilometrów. Abonenci korzystają przede wszystkim z łączności telefonicznej, usług broadcastowych analogowej telewizji kablowej oraz usług transmisji danych (Internet, Intranet). Kablem jest tu najczęściej DSL - Digital Subsriber Line. 
 
@@ -1039,6 +1030,8 @@ Np. architektura gwiazdy z węzłem centralnym **OLT - 	Optical Line Terminal** 
 Ale w tym rodzaje stosowanego zwielokrotnienia oraz techniki wielodostępu. 
 
 ## Sieci PON
+
+[Table of Contents](#table-of-contents)
 
 Dostępowe optyczne sieci dostępowe aktywne różnych producentów ani ich poszczególne elementy nie mogą ze sobą współpracować. Operator skazany jest na vendor-lock-in. Dlatego w 1995 zbiegło się kilku takich NTT, Bell South, France Telecom, Deutsche Telecom i zrobili standard sieci PON (Passive Optical Network) do transmitowania ATM. ETSI i ATM Forum ją zaakceptowały, zostało wzięte zalecenie ITU więc było git. Była to tzw. **Inicjatywa FSAN**
 
@@ -1247,3 +1240,144 @@ Wady:
 - Trudność z architektura kaskadową
 
 ![image-20231211201506060](img/image-20231211201506060.png)
+
+# Ataki w sieciach swiatlowodowych
+
+[Table of Contents](#table-of-contents)
+
+Wiadomix, że omówimy tylko te w warswie fizycznej.
+
+Dzielą się na:
+
+- Bierne (podłsuch)
+- Czynne (zakłócanie działania sieci - jamming)
+
+W obu wymagany jest fizyczny dostęp od medium, nie da się tego zrobić zdalnie.
+
+## Podsłuch
+
+Metody:
+
+- Teoretyczne (przeniki, efekty nieliniowe)
+- Tapping
+- Wykorzystanie optycznych portów monitorujących w elementach sieci (np. OA lub ROADM)
+
+Omówimy tylko **Tapping**.
+
+Są one najprostsze i nagroźniejsze (bo można zastosować w każdym miejscu). Najlepiej blisko nadajnika, bo tam sygnał jest mocny. 
+
+Istnieją metody nie wymagające przecinania światłowodu.
+
+Zginanie światłowodu (w skali mikro lub makro) powoduje sprzężenie między modem/modami prowadzonymi w rdzeniu i modami płaszczowymi, które ostatecznie wychodzą poza światłowód.
+
+<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005056445.png" alt="image-20231212005056445" style="zoom:67%;" />
+
+Makro lub mikro zgięcia (np. przez dociskanie światłowodu do nierównej powierzchni) powodują wyjście części mocy sygnału na zewnątrz światłowodu. Tą moc można łatwo odebrać fotodetektorem. Wymagane odsłonięcie światłowodu (usunięcie jego pokryć jeśli nieprzezroczyste)
+
+Istnieje komercyjny sprzęt do wykrywania i prowadzenia transmisji w światłowodzie bez jego przecinania (**clip on coupler**).
+
+Sprzęt cywilny (clip on coupler) wprowadza tłumienie wtrąceniowe rzędu kilku dB i jest stosunkowo łatwy do wykrycia przez operatora
+
+Sprzęt specjalny (wojsko, wywiad) ma znacznie mniejsze tłumienie wtrąceniowe (rzędu 0,5 dB ) i jest b. trudny do wykrycia
+
+<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005303145.png" alt="image-20231212005303145" style="zoom:50%;" />
+
+![image-20231212005435251](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005435251.png)
+
+Konkluzja jest taka, że istnieją metody podsłuchu teoretycznie niemożliwe do wykrycia. Te clip-on-couplery wojskowe
+
+## Jamming
+
+Robienie korków w sieci, czyli celowe wprowadzanie do sieci sygnałów zakłócających, co skutkuje pogorszeniem jakości jej usług (zwiększenie BER) lub nawet uniemożliwia transmisję (wtedy to już DoS).
+
+Mamy dwa rodzaje:
+
+- wewnątrz pasmowe (in band)
+- poza pasmowe (out of band)
+
+W sieciach optycznych bez regeneracji (OTN) sygnały zakłócające propagują w sieci, dlatego jest to dużo groźniejsze niż np. w sieciach SDH
+
+Regenerator przecina propagacje zakłóceń
+
+Metody wprowadzania sygnały zakłócającego:
+
+- Tapping ale zamiast podsłuchiwać, podłączamy źródło zakłóceń np. wzmocniony szum emisji spontanicznej ASE z EDFA
+- Wykorzystanie nieużywanych portów optycznych węzłów sieci
+- Wykorzystanie portów monitorującuych
+
+Powyższe metody charakteryzują się bardzo dużym tłumieniem sygnłu zakłócającego, ich źródło musi mieć moc rzędu >+20dBm, a nawet > +30dBm
+
+### Przenik z nieużywanego portu
+
+<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212010314053.png" alt="image-20231212010314053" style="zoom: 50%;" />
+
+### Przenik z portu monitorującego
+
+<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212010332683.png" alt="image-20231212010332683" style="zoom:50%;" />
+
+### Bezpośredni dostęp do sieci
+
+Dużo groźniejsze, bo nie wymagają, aż tak dużych mocy sygnału zakłócającego.
+
+Gdzie można się wpiąć i zrobić **Obca długość fali (alien wavelength)**:?
+
+-  w sieci OTN sygnał klienta, którego transponder nie jest kontrolowany bezpośrednio przez operatora sieci, ale który jest transportowany w tej sieci
+- Port optyczny ONU w dowolnej sieci PON
+
+### Atak in-band vs out-of-band
+
+Wewnątrz pasmowy to taki, gdzie sygnał zakłócający zajmuje to samo pasmo co sygnał użyteczny. Wszystkie wcześniej omówione metody mogą być tu wykorzystane. Wewnątrz pasmowy jest groźniejszy, bo sygnału zakłócającego nie da się usunąć filtrem optycznym.
+
+W sieciach bez regeneracji pojedyncze źródło może zakłócić prace wielu węzłów położonych wzdłuż zakłócanego toru optycznego
+
+### Scanariusze
+
+#### 1 Wykorzystanie własności wzmaków optycznych
+
+Kiedy do wejścia wzmacniacza (np. EDFA) dodawany jest kanał falowy lub sygnał szumowy o b. dużej mocy, wzmacniacz wchodzi w nasycenie i wzmocnienie pozostałych kanałów spada (ang. gain competition ), co daje w rezultacie spadek poziomu ich mocy i redukcję OSNR
+
+Kluczowanie sygnału zakłócającego z odpowiednią częstotliwością powoduje modulację poziomu mocy kanałów użytecznych (ang. cross gain modulation
+
+Kluczowanie (nawet mechaniczne) z niewielką częstotliwością istotnie zakłóca pracę wzmacniacza EDFA
+
+SOA jest znacznie szybszy i bardziej wrażliwy: modulacja (danych) silnych kanałów przenika do kanałów słabszych
+
+Atak poza pasmowy , jest skuteczny na dowolnej długości fali z roboczego zakresu wzmacniacza, o ile moc sygnału zakłócającego jest dostatecznie duża
+
+#### 2 Wykorzystanie zjawisk nieliniowych w światłowodzie
+
+Bardzo skuteczny w przypadku wielokanałowej(WDM)  transmisji koherentnej o złożonych konstelacjach
+
+Atakujący wprowadza kanał o dużej mocy ze stosunkowo wolną modulacją OOK
+
+Bezpośrednio zakłóca transmisję kanału użytecznego o tej samej/zbliżonej długości fali (atak wewnątrz pasmowy)
+
+Zjawiska nieliniowe (w tym XPM/XPolM skrośna modulacja fazy/polaryzacji) przenoszą modulację kanału atakującego na kanały użyteczne o innych długościach fal, zakłócając je (atak poza pasmowy).
+
+Pasmo, w którym zakłócenia są skuteczne, wzrasta z mocą sygnału zakłócającego oraz przy zwiększeniu złożoności modulacji (rozmiar konstelacji) sygnałów zakłócanych
+
+Przykładowo: sygnał OOK o mocy +15dBm zakłóca pasmo 1,2 THz przy modulacji DP QPSK, zaś 3,1 THz przy modulacji DP 16QAM
+
+#### 3 Wykorzystanie dostępu do sieci PON od strony abonenta
+
+Bardzo łatwy do przeprowadzenia atak
+
+Wystarczy ONU zastąpić mocnym źródłem światła pracującym w sposób ciągły (najlepiej w 2. oknie)
+
+Przy dostatecznie mocnym sygnale odbiornik w OLT wchodzi w nasycenie, co całkowicie blokuje transmisję zwrotną ( upstream )
+
+W konsekwencji wyłącza całą sieć dostępową
+
+Jeśli siła sygnału zakłócającego nie jest wystarczająca do wprowadzenia odbiornika OLT w nasycenie:
+
+Jeśli inne ONU pracują na długościach fal zbliżonych do λ sygnału atakującego, to na ich sygnałach wskutek zdudniania generowany jest szum OBI mogący zakłócić transmisję
+
+Kluczowanie sygnału zakłócającego w zależności od częstotliwości powoduje problemy z ARW odbiornika lub bezpośrednio z odczytem danych
+
+Powyższe może zakłócić pracę części lub całości sieci PON
+
+## Ataki na infra
+
+<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212011606983.png" alt="image-20231212011606983" style="zoom:50%;" />
+
+Koniec, updaek Jezusa dzień trzeci mam  w pizdzie
