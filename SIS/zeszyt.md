@@ -1,5 +1,7 @@
 # Table of contents
 
+[Przypomnienie podstaw](#przypomnienie-podstaw)
+
 [Wzmacniacze Optyczne](#wzmacniacze-optyczne)
 
 [Parametry systemów optycznych](#Parametry-systemow-optycznych)
@@ -19,6 +21,64 @@
 - [Sieci PON](#Sieci-PON)
 
 [Ataki w sieciach światłowodowych](#Ataki-w-sieciach-swiatlowodowych)
+
+# Przypomnienie Podstaw
+
+[Table of Contents](#table-of-contents)
+
+Wrzucam tu slajdy moze to coś da. 
+
+<img src="img/image-20231213020822566.png" alt="image-20231213020822566" style="zoom:67%;" />
+
+<img src="img/image-20231213020831865.png" alt="image-20231213020831865" style="zoom:50%;" />
+
+<img src="img/image-20231213020848500.png" alt="image-20231213020848500" style="zoom:50%;" />
+
+<img src="img/image-20231213020859144.png" alt="image-20231213020859144" style="zoom:50%;" />
+
+<img src="img/image-20231213020909583.png" alt="image-20231213020909583" style="zoom:50%;" />
+
+<img src="img/image-20231213020924062.png" alt="image-20231213020924062" style="zoom:50%;" />
+
+![image-20231213020934002](img/image-20231213020934002.png)
+
+<img src="img/image-20231213020945153.png" alt="image-20231213020945153" style="zoom:50%;" />
+
+<img src="img/image-20231213020958316.png" alt="image-20231213020958316" style="zoom:50%;" />
+
+<img src="img/image-20231213021010188.png" alt="image-20231213021010188" style="zoom:50%;" />
+
+<img src="img/image-20231213021018840.png" alt="image-20231213021018840" style="zoom:50%;" />
+
+<img src="img/image-20231213021027014.png" alt="image-20231213021027014" style="zoom:50%;" />
+
+<img src="img/image-20231213021036010.png" alt="image-20231213021036010" style="zoom:50%;" />
+
+<img src="img/image-20231213021046294.png" alt="image-20231213021046294" style="zoom:50%;" />
+
+<img src="img/image-20231213021057039.png" alt="image-20231213021057039" style="zoom:50%;" />
+
+<img src="img/image-20231213021107177.png" alt="image-20231213021107177" style="zoom:50%;" />
+
+<img src="img/image-20231213021123454.png" alt="image-20231213021123454" style="zoom:50%;" />
+
+<img src="img/image-20231213021133639.png" alt="image-20231213021133639" style="zoom:50%;" />
+
+<img src="img/image-20231213021146826.png" alt="image-20231213021146826" style="zoom:50%;" />
+
+<img src="img/image-20231213021155012.png" alt="image-20231213021155012" style="zoom:50%;" />
+
+<img src="img/image-20231213021202236.png" alt="image-20231213021202236" style="zoom:50%;" />
+
+<img src="img/image-20231213021211710.png" alt="image-20231213021211710" style="zoom:50%;" />
+
+<img src="img/image-20231213021220076.png" alt="image-20231213021220076" style="zoom:50%;" />
+
+<img src="img/image-20231213021228599.png" alt="image-20231213021228599" style="zoom:50%;" />
+
+<img src="img/image-20231213021236484.png" alt="image-20231213021236484" style="zoom:50%;" />
+
+
 
 # Wzmacniacze optyczne
 
@@ -268,7 +328,7 @@ Im rozwarcie oka jest większe tym błędy są mniejsze.
 
 > *rozwarce w sensie takie "roztworzenie" jak stary mówi np. "rozdziaw gębę" (bo wkłada Ci łyżkę z syropkiem)
 >
-> <img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231213010533952.png" alt="image-20231213010533952" style="zoom: 80%;" />
+> <img src="img/image-20231213010533952.png" alt="image-20231213010533952" style="zoom: 80%;" />
 
 <img src="img/image-20231209160603481.png" alt="image-20231209160603481" style="zoom:67%;" />
 
@@ -651,6 +711,8 @@ G.709 i G.872
 
 <img src="img/image-20231210232327068.png" alt="image-20231210232327068" style="zoom:80%;" />
 
+Digital Wrapper to struktura, która umożliwia kapsułkowanie ramek danych, co pozwala na wysyłanie wielu źródeł danych na tym samym kanale. W praktyce tworzy to optyczną wirtualną sieć prywatną dla każdego sygnału klienta.  Są one stosowane w sieciach OTN. 
+
 ### Warswy OTN
 
 te 6 poziomów do monitorowania
@@ -859,6 +921,8 @@ W Ethernet wykorzystywane są światłowody wielomodowe (multimode).
 <img src="img/image-20231211153440764.png" alt="image-20231211153440764" style="zoom:33%;" />
 
 <img src="img/image-20231211153451754.png" alt="image-20231211153451754" style="zoom:33%;" />
+
+Wgl to jest kurwa tak, że SM są w sieciach dalekiego zasięgu, a MM w sieciach LAN.
 
 ## Fast Ethernet
 
@@ -1270,7 +1334,7 @@ Istnieją metody nie wymagające przecinania światłowodu.
 
 Zginanie światłowodu (w skali mikro lub makro) powoduje sprzężenie między modem/modami prowadzonymi w rdzeniu i modami płaszczowymi, które ostatecznie wychodzą poza światłowód.
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005056445.png" alt="image-20231212005056445" style="zoom:67%;" />
+<img src="img/image-20231212005056445.png" alt="image-20231212005056445" style="zoom:67%;" />
 
 Makro lub mikro zgięcia (np. przez dociskanie światłowodu do nierównej powierzchni) powodują wyjście części mocy sygnału na zewnątrz światłowodu. Tą moc można łatwo odebrać fotodetektorem. Wymagane odsłonięcie światłowodu (usunięcie jego pokryć jeśli nieprzezroczyste)
 
@@ -1280,9 +1344,9 @@ Sprzęt cywilny (clip on coupler) wprowadza tłumienie wtrąceniowe rzędu kilku
 
 Sprzęt specjalny (wojsko, wywiad) ma znacznie mniejsze tłumienie wtrąceniowe (rzędu 0,5 dB ) i jest b. trudny do wykrycia
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005303145.png" alt="image-20231212005303145" style="zoom:50%;" />
+<img src="img/image-20231212005303145.png" alt="image-20231212005303145" style="zoom:50%;" />
 
-![image-20231212005435251](C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212005435251.png)
+![image-20231212005435251](img/image-20231212005435251.png)
 
 Konkluzja jest taka, że istnieją metody podsłuchu teoretycznie niemożliwe do wykrycia. Te clip-on-couplery wojskowe
 
@@ -1309,11 +1373,11 @@ Powyższe metody charakteryzują się bardzo dużym tłumieniem sygnłu zakłóc
 
 ### Przenik z nieużywanego portu
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212010314053.png" alt="image-20231212010314053" style="zoom: 50%;" />
+<img src="img/image-20231212010314053.png" alt="image-20231212010314053" style="zoom: 50%;" />
 
 ### Przenik z portu monitorującego
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212010332683.png" alt="image-20231212010332683" style="zoom:50%;" />
+<img src="img/image-20231212010332683.png" alt="image-20231212010332683" style="zoom:50%;" />
 
 ### Bezpośredni dostęp do sieci
 
@@ -1378,6 +1442,6 @@ Powyższe może zakłócić pracę części lub całości sieci PON
 
 ## Ataki na infra
 
-<img src="C:\Users\Admin\AppData\Roaming\Typora\typora-user-images\image-20231212011606983.png" alt="image-20231212011606983" style="zoom:50%;" />
+<img src="img/image-20231212011606983.png" alt="image-20231212011606983" style="zoom:50%;" />
 
 Koniec, updaek Jezusa dzień trzeci mam  w pizdzie
