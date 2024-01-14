@@ -73,3 +73,53 @@ Zwątpienie w sens poznania zmysłowego - zmysłowość dostarcza poznania, któ
 Zwątpienie w sens poznania rozumowego - Kartezjusz przedstawia eksperyment myślowy, w którym "złośliwy demon zwodziciel" ma nad nami absolutną władzę i zwodzi nas co do istnienia świata zewnętrznego. Prezentuje nam fałsz tak, że naszym rozumem i tak inaczej wyklinimy niż jest.
 
 Następnie po eksperymencie od razu Kartezjusz myśli ... - Nawet jednak w takim przypadku, nie może on nas zwodzić co do tego, czy istnieje "ja” które wątpi w istnienie świata. Chociaż więc możemy zwątpić o wszystkim, to nie można zwątpić o istnieniu podmiotu wątpiącego. Chociaż możemy nie mieć pewności co do tego, kim jesteśmy i jaki jest świat, to z faktu, że myślimy, wynika, że jest ktoś kto myśli (wątpienie to swego rodzaju myślenie). Z tego powodu „myślę, więc jestem” jest twierdzeniem niepodważalnym, podstawową i prostą ideą z której wywodzą się kolejne sądy.
+
+# Sądy analityczne u Kanta
+
+**a priori** - łac. *to co wcześniejsze*
+
+**a posteriori** - łac. *to co późniejsze*
+
+**sąd a priori** - zdanie wypowiedziane bez udziału doświadczenia. (a priori tu. - to co wcześniejsze względem doświadczenia)
+
+**sąd a posteriori** - zdanie wypowiedziane na podstawie doświadczenia (a posteriori tu - to co późniejsze względem doświadczeniu)
+
+**podmiot** - rzeczownik xd
+
+**orzeczenie** - część zdania, która wyraża czynność podmiotu.
+
+
+
+**sąd analityczny** - zdanie w którym treść orzeczenia zawarta jest logicznie w treści podmiotu. Innymi słowy: każde zdanie, które tylko uwypukla treść podmiotu. Kanta nazywa je sądami rozjaśniającymi, gdyż nie dodają one nam nowej wiedzy, a jedynie rozjaśniają. Przykład:
+
+- "Bóg jest wszechmogący" - pojęciu Boga mieści się wszechmoc.
+- "Każdy kawaler to mężczyzna" - w defce kawalera je słowo mężczyzna. (defka kawalera: mężczyzna nieżonaty)
+
+**sąd syntetyczny** - zdanie zawierające w orzeczeniu treść, której nie ma w podmiocie. Innymi słowy: każda zdanie dodające coś do naszej wiedzy o podmiocie. Kanta nazywa je sądami rozszerzającymi, gdyż rozszerzają naszą wiedzę. Przykład:
+
+- "wszystkie ciała są ciężkie" - W pojęciu ciała zawiera się bowiem tylko wyobrażenie wypełnionej przestrzeni, nie zaś ciężaru
+- "7 + 5 = 12" -  W pojęciu liczby pięć i w pojęciu liczby siedem, oraz w pojęciu sumy, nie zawiera się pojęcie liczby dwanaście.
+- "kot Tomek jest czarny" - W pojęciu kot nie zawiera się, że jest on czarny i ma na imie Tomek, to jest nowa wiedza dla mnie, jak mi laska opowiada o swoim kotku to dla mnie wiedzą nową będzie właśnie jego kolor i imię, resztę o tym kocie wiem
+
+
+
+No i dzięki temu możemy zrobić teraz takie 4 cyk:
+
+**Sądy analityczne a priori** - np. logika, definicje analityczne, <u>zdania koniecznie prawdziwe</u>:
+
+- "trójkąt ma trzy kąty" -  trzy kąty zawierają się w definicji trójkąta i nie potrzebujemy eksperymentu (no bo jak)
+- "bóg jest wszchmogący" - w pojęciu Boga zawiera się wszechmoc oraz nie ma eksperymentu, który by to obalił
+
+**Sądy analityczne a posteriori** - nie istnieją, no bo jak coś się zawiera w definicji czegoś, to już koniec, nie ma eksperymentu, który to sprawdzi
+
+**syntetyczne a priori** - sądy nauk: fizyki, matematyki, metafizyki. Czyli coś co łączy w sobie nową wiedzę z niezależnością jej od eksperymentu. <u>Sądy te są koniecznie prawdziwe.</u>
+
+- "7 + 5 = 12" - Twierdzenie to nie jest analityczne, ponieważ pojęcie "12" nie zawiera się w pojęciach "7" i "5". Jednocześnie jest to wiedza a priori, ponieważ możemy ją poznać niezależnie od doświadczenia.
+- "każde działanie ma swoją reakcję" - ta zasada Newtona nie jest ani analityczna, ani poznawana wyłącznie przez doświadczenie, ale jest uznawana za fundamentalną zasadę rozumowania o ruchu i przyczynowości.
+
+**syntetyczne a posteriori** - sąd doświadczenia, sądy nauk korespondujących z doświadczeniem, fakty historyczne, <u>ich prawdziwość jest możliwa, ale nie konieczna</u>
+
+- "Woda wrze w 100 stopniach Celsjusza przy normalnym ciśnieniu atmosferycznym" - coś nowego o wodzie i sprawdzalne dośw.
+- "Juliusz Cezar został zamordowany w 44 p.n.e" - w defce Juliusza Cezara nie ma tego info, a można było doświadczyć tego wydarzenia
+- "Liczba gatunków ptaków na Madagaskarze jest większa niż w Europie" - coś nowego, a można pojechać i policzyć i się przekonać
+- "Dzisiaj jest deszczowo" - coś nowego o dzisiaj i łatwe do sprawdzenia, wyjść na dwór
