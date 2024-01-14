@@ -123,3 +123,50 @@ No i dzięki temu możemy zrobić teraz takie 4 cyk:
 - "Juliusz Cezar został zamordowany w 44 p.n.e" - w defce Juliusza Cezara nie ma tego info, a można było doświadczyć tego wydarzenia
 - "Liczba gatunków ptaków na Madagaskarze jest większa niż w Europie" - coś nowego, a można pojechać i policzyć i się przekonać
 - "Dzisiaj jest deszczowo" - coś nowego o dzisiaj i łatwe do sprawdzenia, wyjść na dwór
+
+# Rola umysłu w budowie wiedzy naukowej według Kanta
+
+Rzeczywistość wysyła do nas sygnały, a my je porządkujemy, FORMUUJEMY widziane przez nas przedmioty. Materiał dostarczany jest przez rzeczywistość, idzie do Zmysłowości a Intelekt narzuca na niego sobie znane pojęcia. Formy nie są dowolne, z racji, że nasze umysły są czasowo-przestrzenne to formy jakie narzucamy na widzianą rzeczywistość też są czasowo-przestrzenne.
+
+**Formy naoczności** - to czas i przestrzeń. Kant zwrócił uwagę, że każde doświadczenie zmysłowe rozgrywa się w czasie i przestrzeni. Czas i przestrzeń są jakby formą, która nadaje kształt naszym spostrzeżeniom, porządkuje je i umożliwia ich odbiór; wszak wszystko, co postrzegamy, następuje po sobie (czas) lub/i obok siebie (przestrzeń). Formy naoczności stanowią więc warunek możliwości wszelkiego doświadczenia zmysłowego.
+
+**Rewolucja kopernikańska** u Immanuela Kanta odnosi się do fundamentalnej zmiany w sposobie postrzegania roli umysłu w procesie poznania. Kant porównał swoje podejście do filozofii do rewolucji, którą w astronomii przeprowadził Mikołaj Kopernik. Kopernik zrewolucjonizował astronomię, proponując, że to nie Ziemia jest centrum Wszechświata, a Słońce, a Ziemia krąży wokół niego. Podobnie Kant chciał zrewolucjonizować filozofię, zmieniając sposób, w jaki rozumiemy relację między poznaniem a światem. **Zmiana perspektywy**: Tak jak Kopernik przesunął centrum Wszechświata ze Ziemi na Słońce, Kant przesunął centrum poznania z obiektu na podmiot. Zamiast zakładać, że nasze poznawanie dostosowuje się do obiektów, Kant twierdził, że to obiekty muszą dostosować się do naszego sposobu poznawania.
+
+
+
+Rewolucja kopernikańska w filozofii Kanta ustanawia również granice ludzkiego poznania. Kant twierdził, że możemy mieć wiedzę tylko o rzeczach, jak się one nam ukazują (zjawiska), a nie o rzeczach samych w sobie (noumena). To oznacza, że istnieje aspekt rzeczywistości, który pozostaje poza zasięgiem ludzkiego poznania.
+
+1. **Aktywna rola umysłu**: Kant twierdził, że umysł nie jest pasywnym odbiorcą danych z zewnątrz, ale aktywnie przetwarza doświadczenia. Umysł stosuje swoje wewnętrzne struktury i kategorie, aby nadać sens doświadczeniom zmysłowym.
+2. **A priori struktury poznawcze**: Według Kanta, umysł posiada wrodzone sposoby organizowania doświadczeń, które są niezależne od konkretnych doświadczeń. Te struktury a priori obejmują pojęcia takie jak przestrzeń, czas i przyczynowość, które są niezbędne do tworzenia spójnego doświadczenia rzeczywistości.
+3. **Różnica między zjawiskami a rzeczami samymi w sobie**: Kant rozróżniał między "zjawiskami" (Dinge an sich) a "rzeczami samymi w sobie" (Noumena). Zjawiska to rzeczy, jak są postrzegane przez nasze zmysły i przetwarzane przez umysł. Rzeczy same w sobie, z kolei, istnieją niezależnie od naszego postrzegania i są niepoznawalne. Kant argumentował, że możemy mieć wiedzę tylko o zjawiskach, a nie o noumenach.
+4. **Granice poznania**: Kant uważał, że istnieją granice tego, co możemy poznać. Nasze poznawanie jest ograniczone do tego, jak rzeczywistość jest przedstawiana przez nasze zmysły i przetwarzana przez umysł. Nie możemy mieć bezpośredniej wiedzy o rzeczach samych w sobie.
+5. **Synteza a priori**: Kant wprowadził pojęcie sądów syntetycznych a priori, które są niezależne od doświadczenia, ale rozszerzają naszą wiedzę. Są one możliwe dzięki strukturom a priori umysłu, które pozwalają nam organizować doświadczenia w sposób, który nadaje im sens.
+
+Podsumowując, Kant uważał, że umysł odgrywa kluczową rolę w kształtowaniu naszego postrzegania rzeczywistości. Jego podejście 
+Immanuel Kant, niemiecki filozof z epoki Oświecenia, zrewolucjonizował sposób, w jaki rozumiemy relację między umysłem a rzeczywistością. Jego filozofia, często określana jako "kopernikańska rewolucja w filozofii", zakłada, że nasze postrzeganie rzeczywistości jest głęboko ukształtowane przez struktury poznawcze umysłu. Oto kluczowe aspekty jego teorii:
+
+1. **Aktywna rola umysłu**: Kant twierdził, że umysł nie jest pasywnym odbiorcą danych z zewnątrz, ale aktywnie przetwarza doświadczenia. Umysł stosuje swoje wewnętrzne struktury i kategorie, aby nadać sens doświadczeniom zmysłowym.
+2. **A priori struktury poznawcze**: Według Kanta, umysł posiada wrodzone sposoby organizowania doświadczeń, które są niezależne od konkretnych doświadczeń. Te struktury a priori obejmują pojęcia takie jak przestrzeń, czas i przyczynowość, które są niezbędne do tworzenia spójnego doświadczenia rzeczywistości.
+3. **Różnica między zjawiskami a rzeczami samymi w sobie**: Kant rozróżniał między "zjawiskami" (Dinge an sich) a "rzeczami samymi w sobie" (Noumena). Zjawiska to rzeczy, jak są postrzegane przez nasze zmysły i przetwarzane przez umysł. Rzeczy same w sobie, z kolei, istnieją niezależnie od naszego postrzegania i są niepoznawalne. Kant argumentował, że możemy mieć wiedzę tylko o zjawiskach, a nie o noumenach.
+4. **Granice poznania**: Kant uważał, że istnieją granice tego, co możemy poznać. Nasze poznawanie jest ograniczone do tego, jak rzeczywistość jest przedstawiana przez nasze zmysły i przetwarzana przez umysł. Nie możemy mieć bezpośredniej wiedzy o rzeczach samych w sobie.
+5. **Synteza a priori**: Kant wprowadził pojęcie sądów syntetycznych a priori, które są niezależne od doświadczenia, ale rozszerzają naszą wiedzę. Są one możliwe dzięki strukturom a priori umysłu, które pozwalają nam organizować doświadczenia w sposób, który nadaje im sens.
+
+Podsumowując, Kant uważał, że umysł odgrywa kluczową rolę w kształtowaniu naszego postrzegania rzeczywistości. Jego podejście podkreśla, że nasze doświadczenie świata jest zawsze pośredniczone przez wewnętrzne struktury poznawcze, co oznacza, że nasze postrzeganie rzeczywistości jest w pewnym sensie subiektywne.
+
+# Kryterium naukowości według Poppera
+
+Jego podejście znacznie różniło się od tradycyjnego poglądu na naukę, który uznawał indukcję za podstawową metodę weryfikacji teorii naukowych.
+
+Indukcja to proces wnioskowania, w którym na podstawie szczegółowych obserwacji dochodzi się do ogólnych wniosków. Na przykład, po wielokrotnym obserwowaniu, że słońce wschodzi każdego ranka, można indukcyjnie wywnioskować, że słońce zawsze będzie wschodzić.
+
+Popper krytykował indukcję z kilku powodów:
+
+- **Problem zasady indukcji**: Popper argumentował, że nie ma racjonalnego uzasadnienia dla uznania, iż przeszłe wzorce zachowania będą kontynuowane w przyszłości. Inaczej mówiąc, nie ma racjonalnych przesłanek, aby wierzyć, że to, co obserwowaliśmy w przeszłości, będzie się powtarzać. Musimy założyć o stałości funkcjonowania przyrody. 
+- **Problem nieskończonej liczby obserwacji**: Aby wywnioskować ogólną prawdę na podstawie indukcji, musielibyśmy przeprowadzić nieskończoną liczbę obserwacji. Ponieważ jest to niemożliwe, wnioski indukcyjne nigdy nie mogą być uznane za absolutnie pewne. Np. zawsze łabędzie są białe, ale co gdy nagle pewnego dnia zobaczymy czarnego? Albo różową owcę w Minecrafcie?
+
+Zamiast indukcji, Popper proponował falsyfikowalność jako kluczowe kryterium naukowości. Popper twierdzi, że naukowe mogą być tylko takie twierdzenia, które dają się obalić; jeśli twierdzenie jest odporne na wszelkie próby odrzucenia i potwierdzają je wszystkie fakty należące do uniwersum, to twierdzenie albo jest tautologiczne albo nieracjonalne, czyli nienaukowe. 
+
+Według niego, teoria naukowa powinna być sformułowana tak, aby była możliwa do obalenia przez eksperymenty lub obserwacje. To oznacza, że naukowiec powinien aktywnie szukać dowodów, które mogą teorię obalić, a nie tylko potwierdzać ją.
+
+Teorie o czarownicach z czasów średniowiecza były konstruowane w taki sposób, że żadna możliwa obserwacja czy argument nie mogły ich obalić, co czyniło je nienaukowymi według kryterium Poppera. Na przykład, jeśli osoba oskarżona o czary zachorowała lub zmarła, było to traktowane jako dowód jej winy. Jeśli jednak osoba ta nie doświadczała żadnych konsekwencji, tłumaczono to tym, że jej czary były wyjątkowo silne lub że otrzymywała pomoc od diabła, zamiast rozważać to jako dowód przeciwko istnieniu czarów. Taki cyrkularny sposób rozumowania oznaczał, że teorie te były odporne na falsyfikację.
+
